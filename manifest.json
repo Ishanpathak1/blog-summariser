@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Advanced Blog Summarizer and Visualizer",
+    "version": "1.0",
+    "description": "Uses AI to summarize blog posts and visualize numeric data.",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
+  
+  
